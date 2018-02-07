@@ -4,8 +4,8 @@ public class Grid {
 	int matrixSize;
 	
 	public Grid(int size) {
-		this.init();
 		this.matrixSize = size;
+		this.init();
 	}
 	
 	public void init() {
@@ -85,7 +85,7 @@ public class Grid {
 	public void display() {
 		for	(int i = 0; i < this.matrixSize; i++) {
 			if (0 == i) {
-				System.out.println("---------------------");
+				System.out.println(String.format("%" + (4 * this.matrixSize) + "s", "").replace(' ', '-') + "-");
 			}
 			
 			for	(int j = 0; j < this.matrixSize; j++) {
@@ -102,8 +102,8 @@ public class Grid {
 					System.out.print('\n');
 				}
 			}
-			
-			System.out.println("---------------------");
+
+			System.out.println(String.format("%" + (4 * this.matrixSize) + "s", "").replace(' ', '-') + "-");
 		}
 	}
 }

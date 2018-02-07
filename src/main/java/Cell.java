@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class Cell {
 	private boolean isAlive;
+	private boolean isAliveNextGeneration;
 	
 	public Cell() {
 		this.isAlive = (new Random()).nextBoolean();
@@ -17,5 +18,13 @@ public class Cell {
 	
 	public void makeDead() {
 		this.isAlive = false;
+	}
+	
+	public void applyNextGeneration() {
+		this.isAlive = this.isAliveNextGeneration;
+	}
+	
+	public void isAliveAtNextGeneration(boolean isAlive) {
+		this.isAliveNextGeneration = isAlive;
 	}
 }
